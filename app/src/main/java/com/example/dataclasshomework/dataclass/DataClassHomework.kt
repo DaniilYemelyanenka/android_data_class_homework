@@ -27,7 +27,7 @@ fun main() {
         Teacher("Евгений", 2, 1, languageList)
     )
 
-    val experiencedTeacher = getExperiencedTeacher(experience = 5, teacherList = teacherList)
+    val experiencedTeacher = getExperiencedTeacher(experience = 13, teacherList = teacherList)
 
     if (experiencedTeacher.isNotEmpty()) {
         println(experiencedTeacher)
@@ -37,5 +37,5 @@ fun main() {
 }
 
 private fun getExperiencedTeacher(experience: Int, teacherList: List<Teacher>): List<String> {
-    return teacherList.filter { teacher -> teacher.progExperience > 5 }.map { element -> element.name };
+    return teacherList.filter { teacher -> teacher.progExperience > experience }.map { element -> element.name };
 }
